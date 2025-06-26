@@ -1,0 +1,17 @@
+# config/scanner_config.yaml
+scanners:
+  - name: trivy
+    enabled: true
+    target: "alpine:3.19"
+    options:
+      format: "json"
+      severity: "CRITICAL,HIGH"
+  -name: gitleaks
+   enabled: true
+   target: "./"     # locla repo path
+
+output:
+  format: "html"
+  path: "reports/"
+notifications:
+  slack_webhook: null
