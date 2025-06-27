@@ -1,3 +1,29 @@
+
+
+# 🔒 DevSecOps Scanner
+
+A modular, YAML-config-driven security scanning CLI tool that integrates multiple scanners (like Trivy & Gitleaks) into one streamlined workflow—with unified reporting in JSON and HTML.
+
+---
+
+## 🚀 Features
+
+- ✅ YAML-powered scanner orchestration
+- 🛡️ Integrated support for Trivy and Gitleaks
+- 📊 Aggregated vulnerability + secrets summary
+- 🎨 HTML report generation (with Jinja2 templates)
+- 🤖 GitHub Actions CI workflow ready
+- 📦 Modular architecture (easy to plug in Checkov, Semgrep, etc.)
+
+---
+
+## 🛠️ Installation
+
+```bash
+git clone https://github.com/yourusername/devsecops-scanner.git
+cd devsecops-scanner
+pip install -r requirements.txt
+
 # Gitleaks
 
 ```
