@@ -24,12 +24,14 @@ git clone https://github.com/yourusername/devsecops-scanner.git
 cd devsecops-scanner
 pip install -r requirements.txt
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
 
 
-# Gitleaks
+
+### Gitleaks
 
 ```
 ┌─○───┐
