@@ -1,5 +1,5 @@
 # cli/main.py
-# cli/main.py
+
 
 import typer
 from rich.console import Console
@@ -24,11 +24,10 @@ def scan():
             target = scanner.get("target", "alpine:latest")
             options = scanner.get("options", {})
             console.print(f"[bold magenta] Starting scan: {name.upper()} on {target}[/bold magenta]")
-            run_trivy_scan(target, options)
-            
-           elif name == "gitleaks" and enabled:
+            run_trivy_scan(target)
+        elif name == "gitleaks" and enabled:
             repo = scanner.get("target", ".")
-            console.print(f"[bold magenta]🔐 Starting scan: {name.upper()} on {repo}[/bold magenta]")
+            console.print(f"[bold magenta] Starting scan: {name.upper()} on {repo}[/bold magenta]")
             run_gitleaks_scan(repo)
 
     console.print("[bold green] All enabled scans completed![/bold green]")

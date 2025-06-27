@@ -1,0 +1,37 @@
+<!-- templates/report_template.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>DevSecOps Scan Summary</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 2rem; background: #f7f7f7; }
+    h1 { color: #222; }
+    .section { margin-bottom: 2rem; padding: 1rem; background: #fff; border-left: 5px solid #007acc; }
+    .highlight { font-weight: bold; color: #d73a49; }
+    ul { margin: 0.5rem 0 0 1.5rem; }
+  </style>
+</head>
+<body>
+  <h1>🔍 DevSecOps Scan Summary</h1>
+
+  <div class="section">
+    <h2>🛡️ Trivy Vulnerabilities</h2>
+    <ul>
+      {% for severity, count in summary.trivy.items() %}
+      <li><span class="highlight">{{ severity }}</span>: {{ count }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>🔐 Gitleaks Secrets</h2>
+    <p>Total Secrets Found: <span class="highlight">{{ summary.gitleaks.secrets_found }}</span></p>
+    <ul>
+      {% for file in summary.gitleaks.files %}
+      <li>{{ file }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</body>
+</html>

@@ -6,12 +6,15 @@ scanners:
     options:
       format: "json"
       severity: "CRITICAL,HIGH"
-  -name: gitleaks
-   enabled: true
-   target: "./"     # locla repo path
+
+  - name: gitleaks
+    enabled: true
+    target: "./"  # Local repo path
 
 output:
   format: "html"
   path: "reports/"
+
 notifications:
   slack_webhook: null
+
