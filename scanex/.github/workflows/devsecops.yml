@@ -40,8 +40,8 @@ jobs:
           python scanner/report_builder.py
           python scanner/report_to_html.py
 
-      - name: Upload HTML Report
-        uses: actions/upload-artifact@v3
-        with:
-          name: scan-report
-          path: reports/scan_report.html
+       - name: Upload HTML Report
+          uses: actions/upload-artifact@v4
+          with:
+               name: scan-report
+               path: reports/scan_report.html
