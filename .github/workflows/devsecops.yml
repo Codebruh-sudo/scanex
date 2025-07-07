@@ -36,12 +36,13 @@ jobs:
 
       - name: Run Security Scans
         run: |
-          python cli/main.py scan
-          python scanner/report_builder.py
-          python scanner/report_to_html.py
+          PYTHONPATH=. python cli/main.py scan
+          PYTHONPATH=. python scanner/report_builder.py
+          PYTHONPATH=. python scanner/report_to_html.py
 
       - name: Upload HTML Report
         uses: actions/upload-artifact@v4
         with:
-             name: scan-report
-             path: reports/scan_report.html
+          name: scan-report
+          path: reports/scan_report.html
+
