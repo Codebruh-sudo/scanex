@@ -36,9 +36,11 @@ jobs:
 
       - name: Run Security Scans
         run: |
-          PYTHONPATH=. python cli/main.py scan
-          PYTHONPATH=. python scanner/report_builder.py
-          PYTHONPATH=. python scanner/report_to_html.py
+          export PYTHONPATH=$(pwd)
+          python cli/main.py
+
+      - name: Check if report exists
+        run: ls -lh reports/scan_report.html
 
       - name: Upload HTML Report
         uses: actions/upload-artifact@v4

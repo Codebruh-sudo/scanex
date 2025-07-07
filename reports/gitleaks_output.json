@@ -1,1 +1,44 @@
-[]
+[
+ {
+  "RuleID": "generic-api-key",
+  "Description": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.",
+  "StartLine": 481,
+  "EndLine": 481,
+  "StartColumn": 15,
+  "EndColumn": 48,
+  "Match": "DB_PASSWORD=8ae31cacf141669ddfb5da",
+  "Secret": "8ae31cacf141669ddfb5da",
+  "File": "README.md",
+  "SymlinkFile": "",
+  "Commit": "5182c6ff3dccfc966b4e2a8be4c415b386a6aa97",
+  "Link": "https://github.com/Codebruh-sudo/scanex/blob/5182c6ff3dccfc966b4e2a8be4c415b386a6aa97/README.md?plain=1#L481",
+  "Entropy": 3.5383105,
+  "Author": "Codebruh-sudo",
+  "Email": "abhishek2122002@gmail.com",
+  "Date": "2025-06-27T21:03:23Z",
+  "Message": "commit all changes",
+  "Tags": [],
+  "Fingerprint": "5182c6ff3dccfc966b4e2a8be4c415b386a6aa97:README.md:generic-api-key:481"
+ },
+ {
+  "RuleID": "sidekiq-secret",
+  "Description": "Discovered a Sidekiq Secret, which could lead to compromised background job processing and application data breaches.",
+  "StartLine": 51,
+  "EndLine": 51,
+  "StartColumn": 23,
+  "EndColumn": 75,
+  "Match": "BUNDLE_ENTERPRISE__CONTRIBSYS__COM=cafebabe:deadbeef\"",
+  "Secret": "cafebabe:deadbeef",
+  "File": "README.md",
+  "SymlinkFile": "",
+  "Commit": "5182c6ff3dccfc966b4e2a8be4c415b386a6aa97",
+  "Link": "https://github.com/Codebruh-sudo/scanex/blob/5182c6ff3dccfc966b4e2a8be4c415b386a6aa97/README.md?plain=1#L51",
+  "Entropy": 2.6098502,
+  "Author": "Codebruh-sudo",
+  "Email": "abhishek2122002@gmail.com",
+  "Date": "2025-06-27T21:03:23Z",
+  "Message": "commit all changes",
+  "Tags": [],
+  "Fingerprint": "5182c6ff3dccfc966b4e2a8be4c415b386a6aa97:README.md:sidekiq-secret:51"
+ }
+]
